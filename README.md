@@ -4,6 +4,6 @@ Lots of stuff coming soon. Need to start dumping my favorite Splunk queries. Com
 
 https://attack.mitre.org/wiki/Technique/T1128
 
-Link to netshell doc:
+Link to HTML view
 
-https://github.com/MatthewDemaske/ThreatHuntingStuff/blob/master/netshell.html
+https://htmlpreview.github.io/?https://github.com/MatthewDemaske/blogbackup/blob/master/netshell.html
