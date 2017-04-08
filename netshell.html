@@ -1,0 +1,370 @@
+This is Google's cache of http://www.adaptforward.com/2016/09/using-netshell-to-execute-evil-dlls-and-persist-on-a-host/. It is a snapshot of the page as it appeared on Feb 13, 2017 06:19:49 GMT.
+The current page could have changed in the meantime. Learn more
+Full versionText-only versionView sourceTip: To quickly find your search term on this page, press Ctrl+F or ⌘-F (Mac) and use the find bar.
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+<meta name="viewport" content="width=device-width">
+<title>Using NetShell to execute evil DLLs and persist on a host &#8211; Adapt Forward Cyber Security</title>
+<meta name="title" content="Using NetShell to execute evil DLLs and persist on a host" />
+<meta name="description" content="&lt;h3&gt;&lt;strong&gt;By Matthew Demaske, Director of Threat Research&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;strong&gt;I&#039;m always looking for ways an adversary can execute something on ..." />
+<meta property="og:title" content="Using NetShell to execute evil DLLs and persist on a host" />
+<meta property="og:url" content="http://www.adaptforward.com/2016/09/using-netshell-to-execute-evil-dlls-and-persist-on-a-host/" />
+<meta property="og:description" content="&lt;h3&gt;&lt;strong&gt;By Matthew Demaske, Director of Threat Research&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;strong&gt;I&#039;m always looking for ways an adversary can execute something on ..." />
+<meta property="og:site_name" content="Adapt Forward Cyber Security" />
+<meta name="twitter:title" content="Using NetShell to execute evil DLLs and persist on a host" />
+<meta name="twitter:description" content="&lt;h3&gt;&lt;strong&gt;By Matthew Demaske, Director of Threat Research&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;strong&gt;I&#039;m always looking for ways an adversary can execute something on ..." />
+<meta name="twitter:domain" content="Adapt Forward Cyber Security" />
+<meta name="twitter:card" content="summary" />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Adapt Forward Cyber Security &raquo; Feed" href="http://www.adaptforward.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Adapt Forward Cyber Security &raquo; Comments Feed" href="http://www.adaptforward.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Adapt Forward Cyber Security &raquo; Using NetShell to execute evil DLLs and persist on a host Comments Feed" href="http://www.adaptforward.com/2016/09/using-netshell-to-execute-evil-dlls-and-persist-on-a-host/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.adaptforward.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.2"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='contact-form-7-css'  href='http://www.adaptforward.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='precious-gfonts-opensans-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A400%2C600%2C700&#038;ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='precious-gfonts-roboto-css'  href='//fonts.googleapis.com/css?family=Roboto%3A400%2C100%2C300%2C500%2C700&#038;ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='precious-gfonts-roboto-condence-css'  href='//fonts.googleapis.com/css?family=Roboto+Condensed%3A400%2C100%2C300%2C500%2C700&#038;ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='precious-gfonts-lobster-css'  href='//fonts.googleapis.com/css?family=Lobster&#038;ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='precious-gfonts-opensanscondensed-css'  href='//fonts.googleapis.com/css?family=Open+Sans+Condensed%3A300&#038;ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='precious-gfonts-lato-css'  href='//fonts.googleapis.com/css?family=Lato%3A400%2C900%2C400italic%2C700%2C300italic%2C300%2C700italic&#038;ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='precious-basic-style-css'  href='http://www.adaptforward.com/wp-content/themes/precious-lite-pro/style.css?ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='precious-editor-style-css'  href='http://www.adaptforward.com/wp-content/themes/precious-lite-pro/editor-style.css?ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='precious-base-style-css'  href='http://www.adaptforward.com/wp-content/themes/precious-lite-pro/css/style_base.css?ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='precious-responsive-style-css'  href='http://www.adaptforward.com/wp-content/themes/precious-lite-pro/css/theme-responsive.css?ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='precious-nivo-style-css'  href='http://www.adaptforward.com/wp-content/themes/precious-lite-pro/css/nivo-slider.css?ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='precious-prettyphoto-style-css'  href='http://www.adaptforward.com/wp-content/themes/precious-lite-pro/css/prettyPhoto.css?ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='precious-font-awesome-style-css'  href='http://www.adaptforward.com/wp-content/themes/precious-lite-pro/css/font-awesome.min.css?ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='precious-animation-style-css'  href='http://www.adaptforward.com/wp-content/themes/precious-lite-pro/css/animation.css?ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='precious-bxslider-style-css'  href='http://www.adaptforward.com/wp-content/themes/precious-lite-pro/css/jquery.bxslider.css?ver=4.7.2' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.adaptforward.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://www.adaptforward.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://www.adaptforward.com/wp-content/themes/precious-lite-pro/js/jquery.prettyPhoto.js?ver=4.7.2'></script>
+<script type='text/javascript' src='http://www.adaptforward.com/wp-content/themes/precious-lite-pro/js/custom.js?ver=4.7.2'></script>
+<script type='text/javascript' src='http://www.adaptforward.com/wp-content/themes/precious-lite-pro/js/smooth-scroll.js?ver=4.7.2'></script>
+<script type='text/javascript' src='http://www.adaptforward.com/wp-content/themes/precious-lite-pro/js/filter-gallery.js?ver=4.7.2'></script>
+<script type='text/javascript' src='http://www.adaptforward.com/wp-content/themes/precious-lite-pro/js/jquery.bxslider.min.js?ver=4.7.2'></script>
+<link rel='https://api.w.org/' href='http://www.adaptforward.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.adaptforward.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.adaptforward.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='USMC infantry tactics and your blue team. Like PB and Jam.' href='http://www.adaptforward.com/2016/06/usmc-infantry-tactics-and-your-blue-team-like-pb-and-jam/' />
+<meta name="generator" content="WordPress 4.7.2" />
+<link rel="canonical" href="http://www.adaptforward.com/2016/09/using-netshell-to-execute-evil-dlls-and-persist-on-a-host/" />
+<link rel='shortlink' href='http://www.adaptforward.com/?p=374' />
+<link rel="alternate" type="application/json+oembed" href="http://www.adaptforward.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.adaptforward.com%2F2016%2F09%2Fusing-netshell-to-execute-evil-dlls-and-persist-on-a-host%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://www.adaptforward.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.adaptforward.com%2F2016%2F09%2Fusing-netshell-to-execute-evil-dlls-and-persist-on-a-host%2F&#038;format=xml" />
+    	
+    	<script>
+jQuery(window).scroll( function(){
+	var wwd = jQuery(window).width();
+	if( wwd > 939 ){
+		fixedHeader(); 	// fix header on page scroll
+	}
+});
+
+// function to fix header on page scroll / load
+var fixedHeader = function(){
+	var hdrHt = jQuery('div.header').height();
+	var scrPos = jQuery(window).scrollTop();
+	var aBarHt = jQuery('#wpadminbar').height();
+	}
+			jQuery(window).load(function() {
+        jQuery('#slider').nivoSlider({
+        	effect:'fade', //sliceDown, sliceDownLeft, sliceUp, sliceUpLeft, sliceUpDown, sliceUpDownLeft, fold, fade, random, slideInRight, slideInLeft, boxRandom, boxRain, boxRainReverse, boxRainGrow, boxRainGrowReverse
+		  	animSpeed: 500,
+			pauseTime: 6000,
+			directionNav: true,
+			controlNav: false,
+			pauseOnHover: false,
+    });
+});
+		</script>
+    <style>body, .top-grey-box, .testimonial-section, .feature-box p, .address, #footer .footer-inner p, .right-features .feature-cell .feature-desc, .price-table{font-family:Arimo;font-size:12px;color:#5b5b5b;font-weight:normal;}body, .contact-form-section .address, .top-grey-box, .testimonial-section .testimonial-box .testimonial-content .testimonial-mid, .right-features .feature-cell, .accordion-box .acc-content, .work-box .work-info, .feature-box{color:1;}body{font-family:Arimo;font-size:12px;color:#5b5b5b;font-weight:normal;}.header .header-inner .logo h1, .logo a{font-family:Oswald;color:#ffffff;font-size:30px;font-weight:bold}.header .header-inner .logo p{font-family:Arimo;color:#ffffff;font-size:12px;font-weight:normal}.header .header-inner .nav ul{font-family:Oswald;font-size:16px;color:#000000;font-weight:normal}.header .header-inner .nav ul li a, .header .header-inner .nav ul li ul li a{color:#000000;}.header .header-inner .nav ul li a:hover{color:#6fa73a;}#slider .top-bar h4{font-family:Roboto Condensed;color:#d1d1d1;font-size:20px;font-weight:normal}#slider .top-bar h2{font-family:Oswald;color:#ffffff;font-size:40px;font-weight:bold}#slider .top-bar p{font-family:Arimo;color:#ffffff;font-size:12px;font-weight:normal}#services-box h2{font-family:Oswald;color:#5b5b5b;font-size:15px;font-weight:normal}h2.section-title{font-family:Oswald;font-size:50px;font-weight:bold}h1.entry-title{font-family:Oswald;font-size:30px;font-weight:bold;color:#222222}h3.widget-title{font-family:Oswald;font-size:18px;font-weight:normal;color:#222222}.footer-col h2{font-family:Oswald;font-size:20px;font-weight:normal;color:#ffffff}#main-footer, .copyright ul li, .footer-menu ul li a{font-family:Arimo;font-size:12px;font-weight:normal;color:#ffffff}#main-footer{background-color:#373a3f;}a{color:#6fa73a;}a:hover{color:#666666;}.copyright-txt{font-family:1;color:1}body{background-color:#ffffff;}#services-box{background-color:#ffffff;}#services-box:hover{background-color:#f6f6f8;}a.read-more, input.search-submit, .post-password-form input[type=submit], .photobooth .filter-gallery ul li.current a, .photobooth .filter-gallery ul li:hover a, #contact input[type="submit"], #commentform input#submit{background-color:#6fa73a;}a.read-more:hover, input.search-submit:hover, .post-password-form input[type=submit]:hover, #contact input[type="submit"]:hover, #commentform input#submit:hover{background-color:#222222;}.cat_comments, a.blog-more{background-color:#373a3f;}a.read-more, .common_btn{color:#ffffff;}.fourbox h2, #contact .column-2 h2{color:#444444;}a.common_btn:hover{color:1;}.social-icons a{background-color:#444444;color:#ffffff}.social-icons a:hover{background-color:#ffffff;color:#222222}.copyright{color:#ffffff;}.copyright-wrapper{background-color:#222222;}.photobooth .gallery ul li:hover{ background:#6fa73a; float:left; background:url(http://www.adaptforward.com/wp-content/themes/precious-lite-pro/images/camera-icon.png) 50% 50% no-repeat #6fa73a; }.nivo-directionNav a{background:url(http://www.adaptforward.com/wp-content/themes/precious-lite-pro/images/slide-nav.png) no-repeat scroll 0 0 #373a3f;}.nivo-controlNav a{background-color:#ffffff}.nivo-controlNav a.active{background-color:#6fa73a}.pagination ul li span, .pagination ul li a{background:#222222}.pagination ul li .current, .pagination ul li a:hover{background:#6fa73a}#services-box:hover h2, .fourbox:hover h2{color:#6fa73a;}a.contact{border:2px solid#ffffff}#services-box{border:1px solid#dfdfdf}#services-box:hover, .fourbox:hover{border-bottom:2px solid#6fa73a}.fourbox{border-bottom:2px solid#dedee0}#socialsection{background-color:1}.team-col{background-color:1}@media screen and (max-width:719px){.header{background-color:#ffffff !important;}}@media screen and (max-width:719px){.header .header-inner .nav ul li a, .header .header-inner .nav ul li ul li a{color:#ffffff;}}.header{background-color:rgba(255,255,255,0.9)}#slider .top-bar h2, #slider .top-bar p, #slider .top-bar h4{background-color:rgba(0,0,0,0.3)}</style>    		<style>
+					.header{ position:relative !important;}
+			</style>
+	<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-76733708-1', 'auto');
+    ga('send', 'pageview');
+</script>
+	<style type="text/css">
+		
+	</style>
+	<style type="text/css">
+	</style>
+<script>
+	jQuery(window).load(function() {
+		// Animate loader off screen
+		jQuery(".se-pre-con").fadeOut("slow");;
+	});
+</script>
+</head>
+
+<body class="post-template-default single single-post postid-374 single-format-standard">
+<div class="header">
+            		<div class="header-inner">
+                    		<div class="logo">
+                            		<a href="http://www.adaptforward.com/">
+                                    	 	                                       <img src="http://www.adaptforward.com/wp-content/uploads/2015/11/AF-Logo_Web.svg" / >
+                                                                            </a>
+                                    <p></p>
+                             </div>
+                             <div class="header-widget">
+                             	                             </div><!-- hedaer-widget -->
+                             <div class="toggle">
+                            <a class="toggleMenu" href="#">Menu</a>
+                            </div>                           
+                            <div class="nav">
+								<div class="menu-primary-container"><ul id="menu-primary" class="menu"><li id="menu-item-69" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-69"><a href="http://www.adaptforward.com">Home</a></li>
+<li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-35"><a href="http://www.adaptforward.com/#skills">Our Skills</a></li>
+<li id="menu-item-71" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-71"><a href="http://www.adaptforward.com/#team">Our Leadership</a></li>
+<li id="menu-item-188" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-188"><a href="http://www.adaptforward.com/blog/">Our Blog</a></li>
+<li id="menu-item-144" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-144"><a href="http://www.adaptforward.com/#why">Why Us</a></li>
+<li id="menu-item-77" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-77"><a href="http://www.adaptforward.com/#contact">Contact</a></li>
+</ul></div>                            </div><!-- nav --><div class="clear"></div>
+                    </div><!-- header-inner -->
+            </div><!-- header -->
+
+
+      <div class="main-container">
+         
+<div class="content-area">
+    <div class="middle-align content_sidebar">
+        <div class="site-main" id="sitemain">
+			                <article id="post-374" class="single-post post-374 post type-post status-publish format-standard hentry category-threat-research tag-active-defense tag-blue-team tag-cyber-hunt tag-cyber-security tag-dfir tag-red-team tag-security-monitoring tag-threat-intelligence">
+
+    <header class="entry-header">
+        <h1 class="entry-title">Using NetShell to execute evil DLLs and persist on a host</h1>
+    </header><!-- .entry-header -->
+
+    <div class="entry-content">
+        <div class="postmeta">
+            <div class="post-date">September 23, 2016</div><!-- post-date -->
+            <div class="post-comment"> | <a href="http://www.adaptforward.com/2016/09/using-netshell-to-execute-evil-dlls-and-persist-on-a-host/#comments">1 Comment</a></div>
+            <div class="clear"></div>
+        </div><!-- postmeta -->
+		        <h3><strong>By Matthew Demaske, Director of Threat Research</strong></h3>
+<h3><strong>I&#8217;m always looking for ways an adversary can execute something on a system via &#8220;trusted&#8221; methods. One great example is Powershell. It&#8217;s beloved by sysadmins and hackers alike. AV won&#8217;t care and Virustotal says it&#8217;s squeaky clean. I&#8217;m not going to go into all the various avenues of attack via Powershell because I&#8217;ll be here all night. Just know that anything that&#8217;s available to your users/staff is available to an attacker. After all, once someone gets into your network, what separates them from a legitimate user? Nothing. Any tool that will give you information about a system(s) is fair game. Ipconfig may seem like a harmless command, but it can give an attacker useful information. Same goes for a ton of other commands. </strong></h3>
+<h3><strong>Check out this big list of native commands regularly used in recorded cyber attacks: <a href="http://blog.jpcert.or.jp/2016/01/windows-commands-abused-by-attackers.html">http://blog.jpcert.or.jp/2016/01/windows-commands-abused-by-attackers.html</a>. Built in native Windows tools are some of the best ways to pwn a network while avoiding detection.<br />
+</strong></h3>
+<h3><strong>The discouraging thing is that most of these commands occur thousands upon thousands of times legitimately on your network. Simply throwing ipconfig.exe into a blacklist for your SIEM to alert on will make people very angry at you. These aren&#8217;t traditional indicators of compromise, but with added context, they absolutely can be. This is why I&#8217;m a fan of hiring real human people to hunt, instead of buying a box or a feed subscription. But, that&#8217;s a rant for another post.</strong></h3>
+<h3><strong>To get back on track, I was researching ways an adversary could use the Windows Firewall command line tool called netsh(NetShell) when I saw something curious in the list of available commands: &#8220;add&#8221;</strong></h3>
+<h3><a href="http://www.adaptforward.com/wp-content/uploads/2016/09/netsh1.png"><img class="alignnone size-medium_large wp-image-386" src="http://www.adaptforward.com/wp-content/uploads/2016/09/netsh1-768x395.png" alt="netsh1" width="768" height="395" srcset="http://www.adaptforward.com/wp-content/uploads/2016/09/netsh1-768x395.png 768w, http://www.adaptforward.com/wp-content/uploads/2016/09/netsh1-300x154.png 300w, http://www.adaptforward.com/wp-content/uploads/2016/09/netsh1.png 900w" sizes="(max-width: 768px) 100vw, 768px" /></a></h3>
+<h3><strong>Add what?</strong></h3>
+<h3><a href="http://www.adaptforward.com/wp-content/uploads/2016/09/netsh4.png"><img class="alignnone size-medium_large wp-image-387" src="http://www.adaptforward.com/wp-content/uploads/2016/09/netsh4-768x390.png" alt="netsh4" width="768" height="390" srcset="http://www.adaptforward.com/wp-content/uploads/2016/09/netsh4-768x390.png 768w, http://www.adaptforward.com/wp-content/uploads/2016/09/netsh4-300x152.png 300w, http://www.adaptforward.com/wp-content/uploads/2016/09/netsh4.png 900w" sizes="(max-width: 768px) 100vw, 768px" /></a></h3>
+<h3><strong>Installs a DLL? Que!?</strong></h3>
+<h3><strong>I found a POC DLL I use for stuff that just pops calc and figured why not. There&#8217;s no way it&#8217;s going to just run this, right?</strong></h3>
+<h3><a href="http://www.adaptforward.com/wp-content/uploads/2016/09/netsh5.png"><img class="alignnone size-medium_large wp-image-388" src="http://www.adaptforward.com/wp-content/uploads/2016/09/netsh5-768x393.png" alt="netsh5" width="768" height="393" srcset="http://www.adaptforward.com/wp-content/uploads/2016/09/netsh5-768x393.png 768w, http://www.adaptforward.com/wp-content/uploads/2016/09/netsh5-300x153.png 300w, http://www.adaptforward.com/wp-content/uploads/2016/09/netsh5.png 902w" sizes="(max-width: 768px) 100vw, 768px" /></a></h3>
+<h3><strong>Dang. What is InitHelperDLL? To Google we go. According to Microsoft </strong></h3>
+<h3><strong>The InitHelperDll function is called by NetShell to perform an initial loading of a helper.</strong></h3>
+<h3><strong>&#8211;<a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms708327(v=vs.85).aspx">https://msdn.microsoft.com/en-us/library/windows/desktop/ms708327(v=vs.85).aspx</a></strong></h3>
+<h3><strong>Ok, a required export. What&#8217;s a helper?</strong></h3>
+<h3><strong>NetShell helpers are DLL files that provide the functionality of a context. Additional helpers extend the functionality of NetShell by providing administrative scripting for networking tasks. Helpers generally provide configuration support, monitoring support, or both, for networking services, utilities, or protocols.</strong></h3>
+<h3><strong>&#8211;<a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms708347(v=vs.85).aspx">https://msdn.microsoft.com/en-us/library/windows/desktop/ms708347(v=vs.85).aspx</a></strong></h3>
+<h3></h3>
+<h3><strong>At this point, I reach out to <a href="https://twitter.com/subTee">Casey Smith</a>, who is really good at finding obscure ways of executing code in Windows. He&#8217;s written extensively on the subject @ <a href="https://subt0x10.blogspot.com">https://subt0x10.blogspot.com</a>. I ask him if he&#8217;s ever heard of this technique and he says he hasn&#8217;t. A few minutes later and he&#8217;s got a working POC going. </strong></h3>
+<h3><a href="http://www.adaptforward.com/wp-content/uploads/2016/09/netsh6.png"><img class="alignnone size-full wp-image-396" src="http://www.adaptforward.com/wp-content/uploads/2016/09/netsh6.png" alt="netsh6" width="675" height="436" srcset="http://www.adaptforward.com/wp-content/uploads/2016/09/netsh6.png 675w, http://www.adaptforward.com/wp-content/uploads/2016/09/netsh6-300x194.png 300w" sizes="(max-width: 675px) 100vw, 675px" /></a></h3>
+<h3></h3>
+<h3><a href="http://www.adaptforward.com/wp-content/uploads/2016/09/thumbnail.png"><img class="alignnone size-medium wp-image-398" src="http://www.adaptforward.com/wp-content/uploads/2016/09/thumbnail-300x300.png" alt="thumbnail" width="300" height="300" srcset="http://www.adaptforward.com/wp-content/uploads/2016/09/thumbnail-300x300.png 300w, http://www.adaptforward.com/wp-content/uploads/2016/09/thumbnail-150x150.png 150w, http://www.adaptforward.com/wp-content/uploads/2016/09/thumbnail-768x768.png 768w, http://www.adaptforward.com/wp-content/uploads/2016/09/thumbnail-1024x1024.png 1024w, http://www.adaptforward.com/wp-content/uploads/2016/09/thumbnail.png 1500w" sizes="(max-width: 300px) 100vw, 300px" /></a></h3>
+<h3></h3>
+<h3></h3>
+<h3><strong>So where do we go from here? Well, I wanted to reverse what I had just done via the &#8220;delete helper &lt;PATH&gt;&#8221; command. So I opened another prompt to delete the entry and&#8230;</strong></h3>
+<h3></h3>
+<h3><a href="http://www.adaptforward.com/wp-content/uploads/2016/09/netsh7.png"><img class="alignnone size-full wp-image-399" src="http://www.adaptforward.com/wp-content/uploads/2016/09/netsh7.png" alt="netsh7" width="675" height="412" srcset="http://www.adaptforward.com/wp-content/uploads/2016/09/netsh7.png 675w, http://www.adaptforward.com/wp-content/uploads/2016/09/netsh7-300x183.png 300w, http://www.adaptforward.com/wp-content/uploads/2016/09/netsh7-240x145.png 240w" sizes="(max-width: 675px) 100vw, 675px" /></a></h3>
+<h3></h3>
+<h3><strong>Whoa, it executed again. It&#8217;s persistent. So, I went back to the Net Helper reference section and found this.</strong></h3>
+<h3><strong>Helpers are DLL files that implement a NetShell context and zero or more of its subcontexts, and are registered with Windows through the system registry.</strong></h3>
+<h3><strong>-https://msdn.microsoft.com/en-us/library/windows/desktop/ms708320(v=vs.85).aspx</strong></h3>
+<h3><strong>through the system registry</strong></h3>
+<h3><strong>through the system registry</strong></h3>
+<h3><strong>through the system registry</strong></h3>
+<h3><strong>through the system registry</strong></h3>
+<h3><strong>through the system registry</strong></h3>
+<h3></h3>
+<h3><strong>This just got better. Pulled up the registry and searched for my DLL.</strong></h3>
+<h3><strong> <a href="http://www.adaptforward.com/wp-content/uploads/2016/09/netsh8.png"><img class="alignnone size-full wp-image-405" src="http://www.adaptforward.com/wp-content/uploads/2016/09/netsh8.png" alt="netsh8" width="830" height="221" srcset="http://www.adaptforward.com/wp-content/uploads/2016/09/netsh8.png 830w, http://www.adaptforward.com/wp-content/uploads/2016/09/netsh8-300x80.png 300w, http://www.adaptforward.com/wp-content/uploads/2016/09/netsh8-768x204.png 768w" sizes="(max-width: 830px) 100vw, 830px" /></a></strong></h3>
+<h3><strong>The entry is made in the HKLM\SOFTWARE\Microsoft\Netsh key. All the other DLLs reside in the System folder, but it&#8217;s not a requirement for your evil DLL. It&#8217;ll run from anywhere. My advice would be to put it in a location where any user account can read from, like System or AppData. You do need admin rights for this by the way. Or at least rights that will let whatever context you&#8217;re in write to HKLM.</strong></h3>
+<h3><strong>The only caveat is that netsh.exe must be ran first for the dll to execute. Netsh doesn&#8217;t automatically run on boot by default, but you could easily use a scheduled task for example. Or a start service. Or a Powershell profile. Or a RunOnce key.  Or blah blah blah. </strong></h3>
+<h3><strong><a href="http://www.adaptforward.com/wp-content/uploads/2016/09/schtask.png"><img class="alignnone size-full wp-image-418" src="http://www.adaptforward.com/wp-content/uploads/2016/09/schtask.png" alt="schtask" width="913" height="487" srcset="http://www.adaptforward.com/wp-content/uploads/2016/09/schtask.png 913w, http://www.adaptforward.com/wp-content/uploads/2016/09/schtask-300x160.png 300w, http://www.adaptforward.com/wp-content/uploads/2016/09/schtask-768x410.png 768w" sizes="(max-width: 913px) 100vw, 913px" /></a><br />
+</strong></h3>
+<h3><strong>Default view of Autoruns won&#8217;t catch it with any listed user account. </strong></h3>
+<h3><a href="http://www.adaptforward.com/wp-content/uploads/2016/09/autorun.png"><img class="alignnone size-full wp-image-417" src="http://www.adaptforward.com/wp-content/uploads/2016/09/autorun.png" alt="autorun" width="631" height="208" srcset="http://www.adaptforward.com/wp-content/uploads/2016/09/autorun.png 631w, http://www.adaptforward.com/wp-content/uploads/2016/09/autorun-300x99.png 300w" sizes="(max-width: 631px) 100vw, 631px" /></a></h3>
+<h3><strong>You would need to uncheck the &#8220;Hide Windows Entries&#8221; options to see it</strong></h3>
+<h3> <a href="http://www.adaptforward.com/wp-content/uploads/2016/09/autorun2.png"><img class="alignnone size-full wp-image-443" src="http://www.adaptforward.com/wp-content/uploads/2016/09/autorun2.png" alt="autorun2" width="1323" height="124" srcset="http://www.adaptforward.com/wp-content/uploads/2016/09/autorun2.png 1323w, http://www.adaptforward.com/wp-content/uploads/2016/09/autorun2-300x28.png 300w, http://www.adaptforward.com/wp-content/uploads/2016/09/autorun2-768x72.png 768w, http://www.adaptforward.com/wp-content/uploads/2016/09/autorun2-1024x96.png 1024w" sizes="(max-width: 1323px) 100vw, 1323px" /><br />
+</a></h3>
+<h3>&#8220;But, it&#8217;s signed, and Virustotal didn&#8217;t find anything!&#8221;</h3>
+<h5><strong>(Sorry about the image size. The page formatting will not make it any larger. Just click to view full image)</strong></h5>
+<h3><strong>I know there&#8217;s a ton of VPN client programs that regularly invoke netsh for various reasons. They usually run under SYSTEM context, too. So depending on the environment, you may not even need to force netsh to run. This is why recon is important before you go making noise you don&#8217;t necessarily need to make. </strong></h3>
+<h3><strong>Regarding the defensive side, if you&#8217;re doing real-time hunting with a tool like Sysmon(which I HIGHLY HIGHLY recommend), you&#8217;re going to want to look for any child processes of netsh.exe</strong></h3>
+<h3><a href="http://www.adaptforward.com/wp-content/uploads/2016/09/netshsysmon.png"><img class="alignnone wp-image-440" src="http://www.adaptforward.com/wp-content/uploads/2016/09/netshsysmon.png" alt="netshsysmon" width="1138" height="573" /></a></h3>
+<h3><strong>I have a client with a pretty sizable group of hosts and I searched going back 120 days looking for children of netsh.exe. There were zero among MILLIONS of netsh.exe processes started. </strong></h3>
+<h3><span style="text-decoration: underline;"><strong>Other general tips/methods to stop or detect this attack:</strong></span></h3>
+<h3><strong>-Obviously scan the HKLM\SOFTWARE\Microsoft\Netsh key for any new entries. Easy. You should have a dynamic list of possible persistence locations anyway in the registry anyway. </strong></h3>
+<h3>&#8211;<strong>Your team should be looking for registry changes made via CMD, powershell, and/or WMI. It may happen frequently, but the more time an analyst spends getting to know their territory, the easier it gets to spot things that look odd.</strong></h3>
+<h3><strong>-DLL whitelisting. Microsoft&#8217;s Applocker will let you configure policy rules on dll executions. This is why I&#8217;m a huge fan of organizations creating &#8220;gold images&#8221; of their operating systems.  As a hunter, I know what the baseline is and searching for anomalies is easier. If I&#8217;m a system admin, gold images make whitelisting so much easier. I&#8217;ll know exactly what to allow and what to block. Any changes need to be approved. Now, if you have no gold image, creating DLL whitelists can be a nightmare. If you start rolling out DLL rules, you can break a lot of important stuff. The good news is that you can create Applocker DLL rules that are audit only. The DLLs will still run, but there will be a Warning message written to the Applocker log. Suck those logs up into your SIEM and go hunting.  </strong></h3>
+<h3><strong>So, how important is this finding? I have no idea. Will it become the next heartbleed? Is it super NSA zero day complicated? Hardly. But, it&#8217;s another avenue an adversary can use. Remember, defenders need to worry about numerous of ways an attacker can carry out their plan. Attackers only need to find one.</strong></h3>
+<h3><strong>I doubt too many folks are monitoring the netsh key for changes or monitoring child processes of netsh.exe. But hey, maybe you will now.</strong></h3>
+<h3><strong>Again, thanks to <a href="https://twitter.com/subTee">Casey Smith</a> for the quick response and for the work on the POC. </strong></h3>
+<h3><strong>I also want to give a shout out to <a href="https://twitter.com/Hexacorn">Adamb</a> who hosts one of the best persistence/DFIR blogs out there. He wrote about the existence of net helper DLLs back in 2013: <a href="http://www.hexacorn.com/blog/2013/08/21/da-lil-world-of-dll-exports-and-entry-points-part-3/">http://www.hexacorn.com/blog/2013/08/21/da-lil-world-of-dll-exports-and-entry-points-part-3/</a></strong></h3>
+<p><strong>-Matt</strong></p>
+                <div class="postmeta">
+            <div class="post-categories"><a href="http://www.adaptforward.com/category/threat-research/" title="View all posts in Threat Research">Threat Research</a></div>
+            <div class="post-tags"> | Tags: <a href="http://www.adaptforward.com/tag/active-defense/" rel="tag">Active Defense</a>, <a href="http://www.adaptforward.com/tag/blue-team/" rel="tag">Blue Team</a>, <a href="http://www.adaptforward.com/tag/cyber-hunt/" rel="tag">Cyber Hunt</a>, <a href="http://www.adaptforward.com/tag/cyber-security/" rel="tag">Cyber Security</a>, <a href="http://www.adaptforward.com/tag/dfir/" rel="tag">DFIR</a>, <a href="http://www.adaptforward.com/tag/red-team/" rel="tag">Red Team</a>, <a href="http://www.adaptforward.com/tag/security-monitoring/" rel="tag">Security Monitoring</a>, <a href="http://www.adaptforward.com/tag/threat-intelligence/" rel="tag">Threat Intelligence</a><br /> </div>
+            <div class="clear"></div>
+        </div><!-- postmeta -->
+    </div><!-- .entry-content -->
+   
+    <footer class="entry-meta">
+            </footer><!-- .entry-meta -->
+
+</article>                	<nav role="navigation" id="nav-below" class="post-navigation">
+		<h1 class="screen-reader-text">Post navigation</h1>
+
+	
+		<div class="nav-previous"><a href="http://www.adaptforward.com/2016/06/usmc-infantry-tactics-and-your-blue-team-like-pb-and-jam/" rel="prev"><span class="meta-nav">&larr;</span> USMC infantry tactics and your blue team. Like PB and Jam.</a></div>		
+			<div class="clear"></div>
+	</nav><!-- #nav-below -->
+	                
+	<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			One thought on &ldquo;<span>Using NetShell to execute evil DLLs and persist on a host</span>&rdquo;		</h2>
+
+		
+		<ol class="comment-list">
+			
+	<li id="comment-4" class="pingback even thread-even depth-1">
+		<div class="comment-body">
+			Pingback: <a href='https://thisweekin4n6.wordpress.com/2016/09/25/week-38-2016/' rel='external nofollow' class='url'>Week 38 &#8211; 2016 &#8211; This Week In 4n6</a> 		</div>
+
+	</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+		
+	
+			<p class="no-comments">Comments are closed.</p>
+	
+	
+</div><!-- #comments -->
+                    </div>
+        <div id="sidebar" >
+    
+            <aside id="archives" class="widget">
+            <h3 class="widget-title">Archives</h3>
+            <ul>
+                	<li><a href='http://www.adaptforward.com/2016/09/'>September 2016</a></li>
+	<li><a href='http://www.adaptforward.com/2016/06/'>June 2016</a></li>
+	<li><a href='http://www.adaptforward.com/2016/05/'>May 2016</a></li>
+	<li><a href='http://www.adaptforward.com/2016/04/'>April 2016</a></li>
+            </ul>
+        </aside>
+        <aside id="meta" class="widget">
+            <h3 class="widget-title">Meta</h3>
+            <ul>
+                                <li><a href="http://www.adaptforward.com/wp-login.php">Log in</a></li>
+                            </ul>
+        </aside>
+    	
+</div><!-- sidebar -->
+
+        <div class="clear"></div>
+    </div>
+</div>
+
+
+<footer id="main-footer">
+		<div class="container">
+        	        		<div class="footer-col"><h2>About Us</h2>
+                <p>Adapt Forward specializes in Defensive and Offensive cyber capabilities. We strive to rewrite the rulebook on how Cyber Defense and Incident Response is done with a unique blend of offense to validate our defense.</p>
+                </div><!-- footer-col -->
+                                
+                                <div class="footer-col"><h2>Recent Posts</h2>
+                	                                        		<div class="foot-post">
+                            	                                    <div class="foot-post-content"><a href="http://www.adaptforward.com/2016/09/using-netshell-to-execute-evil-dlls-and-persist-on-a-host/">Using NetShell to execute evil DLLs and persist on a host</a>
+                                    <h3><strong>By Matthew Demaske, Director of Threat Research</strong></h3>
+<h3><strong>I&#8217;m always looking&#8230;</p>
+                                    </div><!-- foot-post-content --><div class="clear"></div>
+                            </div><!-- foot-post -->
+                                        		<div class="foot-post">
+                            	                                    <div class="foot-post-content"><a href="http://www.adaptforward.com/2016/06/usmc-infantry-tactics-and-your-blue-team-like-pb-and-jam/">USMC infantry tactics and your blue team. Like PB and Jam.</a>
+                                    <h3><strong>by Matthew Demaske, Director of Threat Research</strong></h3>
+<h3><strong>Does it sound&#8230;</p>
+                                    </div><!-- foot-post-content --><div class="clear"></div>
+                            </div><!-- foot-post -->
+                                        		<div class="foot-post">
+                            	                                    <div class="foot-post-content"><a href="http://www.adaptforward.com/2016/05/threat-hunting-and-forensics-are-different/">Ramblings: Threat Hunting And Forensics Are Different.</a>
+                                    <h3>By Matthew Demaske, Director of Threat Research</h3>
+<h3>Just a little Friday&#8230;</p>
+                                    </div><!-- foot-post-content --><div class="clear"></div>
+                            </div><!-- foot-post -->
+                                    </div><!-- footer-col -->
+                                
+                                <div class="footer-col"><h2>Connect With Us</h2>
+                		<div class="social-icons"><a href="https://twitter.com/MrJ3NKS" target="_blank" class="fa fa-twitter fa-2x" title="twitter"></a>  <a href="https://www.linkedin.com/company/adapt-forward" target="_blank" class="fa fa-linkedin fa-2x" title="linkedin"></a></div>                </div><!-- footer-col -->
+                <div class="clear"></div>
+        </div><!-- container -->
+</footer><!-- #main-footer -->
+        <div class="copyright-wrapper">
+        	<div class="inner">
+                <div class="footer-menu">
+                	                        <div class="menu-primary-container"><ul id="menu-primary-1" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-69"><a href="http://www.adaptforward.com">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-35"><a href="http://www.adaptforward.com/#skills">Our Skills</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-71"><a href="http://www.adaptforward.com/#team">Our Leadership</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-188"><a href="http://www.adaptforward.com/blog/">Our Blog</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-144"><a href="http://www.adaptforward.com/#why">Why Us</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-77"><a href="http://www.adaptforward.com/#contact">Contact</a></li>
+</ul></div>                                    </div><!-- footer-menu -->
+                <div class="copyright">
+                	                    	<p>ADAPT FORWARD 2015</p>               
+                                    </div><!-- copyright --><div class="clear"></div>         
+            </div><!-- inner -->
+        </div>
+    </div>
+<a href="#" class="scrollToTop"></a>  
+<link rel='stylesheet' id='precious-gfonts-css'  href='//fonts.googleapis.com/css?family=Arimo%7COswald%7CArimo%7COswald%7CRoboto+Condensed%7COswald%7CArimo%7COswald%7COswald%7COswald%7COswald&#038;ver=4.7.2' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.adaptforward.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.adaptforward.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://www.adaptforward.com/wp-includes/js/wp-embed.min.js?ver=4.7.2'></script>
+
+</body>
+</html>
