@@ -18,4 +18,4 @@ Image="C:\\Windows\\System32\\wbadmin.exe"| transaction User maxspan=60s |
 eval ProcCount = mvcount(Image) | where ProcCount > 1 | table _time,
 Computer, User, Image, CommandLine, ParentImage, ParentCommandLine
 
-Note: My Splunk instance wants me to search filepaths with two slashes "\\". Not sure if that's unique to mine or standard. Some may have file extrations that only look for "*.exe". May have to customize a little to fit your environment
+Note: My Splunk instance wants me to search filepaths with two slashes "\\". Yours may not. May need to customize a little. 
