@@ -14,8 +14,10 @@ Sysmon
 sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=1
 Image="C:\\Windows\\Sys*\\vssadmin.exe" OR
 Image="C:\\Windows\\Sys*\\bcdedit.exe" OR
-Image="C:\\Windows\\System32\\wbadmin.exe"| transaction User maxspan=60s |
-eval ProcCount = mvcount(Image) | where ProcCount > 1 | table _time,
-Computer, User, Image, CommandLine, ParentImage, ParentCommandLine
+Image="C:\\Windows\\System32\\wbadmin.exe"
+| transaction User maxspan=60s 
+|eval ProcCount = mvcount(Image) 
+| where ProcCount > 1 
+| table _time,Computer, User, Image, CommandLine, ParentImage, ParentCommandLine
 
 Note: My Splunk instance wants me to search filepaths with two slashes "\\". Yours may not. May need to customize a little. 
