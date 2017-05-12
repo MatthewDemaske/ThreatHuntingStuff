@@ -2,7 +2,7 @@ These rules look for commonly used built-in Windows commands used by ransomware 
 
 Windows Security Log
 
-sourcetype="XmlWinEventLog:Security" EventCode=4688
+sourcetype="<Windows Security>" EventCode=4688
 NewProcessName="C:\\Windows\\Sys*\\vssadmin.exe" OR
 NewProcessName="C:\\Windows\\Sys*\\bcdedit.exe" OR
 NewProcessName="C:\\Windows\\Sys*\\wbadmin.exe"
@@ -13,14 +13,14 @@ NewProcessName="C:\\Windows\\Sys*\\wbadmin.exe"
 
 Sysmon
 
-sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=1
+sourcetype="<SYSMON>" EventCode=1
 Image="C:\\Windows\\Sys*\\vssadmin.exe" OR
 Image="C:\\Windows\\Sys*\\bcdedit.exe" OR
 Image="C:\\Windows\\System32\\wbadmin.exe"
-| transaction User maxspan=60s 
+|transaction User maxspan=60s 
 |eval ProcCount = mvcount(Image) 
-| where ProcCount > 1 
-| table _time,Computer, User, Image, CommandLine, ParentImage, ParentCommandLine
+|where ProcCount > 1 
+|table _time,Computer, User, Image, CommandLine, ParentImage, ParentCommandLine
 
-Note: My Splunk instance wants me to search filepaths with two slashes "\\". Yours may not. May need to customize a little. 
+Note: My Splunk instance only wants double backslashes when searching file paths. Yours may not. Some customization may be required. 
 
