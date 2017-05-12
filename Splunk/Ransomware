@@ -21,3 +21,4 @@ Image="C:\\Windows\\System32\\wbadmin.exe"
 | table _time,Computer, User, Image, CommandLine, ParentImage, ParentCommandLine
 
 Note: My Splunk instance wants me to search filepaths with two slashes "\\". Yours may not. May need to customize a little. 
+
