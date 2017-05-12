@@ -16,7 +16,7 @@ Sysmon
 sourcetype="<SYSMON>" EventCode=1
 Image="C:\\Windows\\Sys*\\vssadmin.exe" OR
 Image="C:\\Windows\\Sys*\\bcdedit.exe" OR
-Image="C:\\Windows\\System32\\wbadmin.exe"
+Image="C:\\Windows\\Sys*\\wbadmin.exe"
 |transaction User maxspan=60s 
 |eval ProcCount = mvcount(Image) 
 |where ProcCount > 1 
