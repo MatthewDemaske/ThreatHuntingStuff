@@ -1,3 +1,5 @@
+These rules look for commonly used built-in Windows commands used by ransomware to disable system recovery. Looks for execution of vssadmin, bcdedit, and wbadmin by a single user account within 60 seconds of eachother. 
+
 Windows Security Log
 
 sourcetype="XmlWinEventLog:Security" EventCode=4688
