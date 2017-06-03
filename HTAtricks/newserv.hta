@@ -1,0 +1,34 @@
+<title>Installing service</title>
+<script language="VBScript"> 
+ 
+
+  
+   Sub window_onload
+   const impersonation = 3
+
+Const OWN_PROCESS = 16
+Const NOT_INTERACTIVE = False
+Const NORMAL_ERROR_CONTROL = 2
+
+
+   Set Locator = CreateObject("WbemScripting.SWbemLocator")
+   Set Service = Locator.ConnectServer()
+   Service.Security_.ImpersonationLevel=impersonation
+
+   Set Process = Service.Get("Win32_BaseService")
+ 
+
+errReturn = Process.Create("DbService", _
+"New Service", _
+"c:\windows\system32\db.exe", _
+OWN_PROCESS, _
+NORMAL_ERROR_CONTROL, _
+"Manual", _
+NOT_INTERACTIVE, _
+"NT AUTHORITY\LocalService", "")
+
+
+end sub
+
+</script>
+</head>
