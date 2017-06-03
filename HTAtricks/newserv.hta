@@ -18,9 +18,9 @@ Const NORMAL_ERROR_CONTROL = 2
    Set Process = Service.Get("Win32_BaseService")
  
 
-errReturn = Process.Create("DbService", _
+errReturn = Process.Create("foo", _
 "New Service", _
-"c:\windows\system32\db.exe", _
+"c:\windows\system32\foo.exe", _
 OWN_PROCESS, _
 NORMAL_ERROR_CONTROL, _
 "Manual", _
