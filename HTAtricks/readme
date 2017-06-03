@@ -1,0 +1,7 @@
+
+
+should spawn new process or service from HTA without being a child of MSHTA(blue teamers will be looking for this). Needs testing
+
+Sources
+https://twitter.com/enigma0x3/status/870810601483894784
+http://seclists.org/vuln-dev/2004/Mar/3
