@@ -1,6 +1,6 @@
 
 
-should spawn new process or service from HTA without being a child of MSHTA(blue teamers will be looking for this). Needs testing
+should spawn new process or service from HTA without being a child of MSHTA(blue teamers will be looking for this).
 
 Sources
 https://twitter.com/enigma0x3/status/870810601483894784
