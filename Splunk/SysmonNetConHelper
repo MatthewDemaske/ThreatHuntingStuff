@@ -1,4 +1,6 @@
-Useful helper script for correlating sysmon netcon logs with their EvtCode1 counterparts by tying them to the ProcessGuid.You can keep or remove the dports. It helps trim the noise. Most actors will try to exfil or use C2 over these ports. 
+Useful helper script for correlating sysmon netcon logs with their EvtCode1 counterparts by tying them to the ProcessGuid.
+You can keep or remove the dports. 
+It helps trim the noise. Most actors will try to exfil or use C2 over these ports. 
 
 
 sourcetype="<Sysmon>" (EventCode=1 Filename="<process>.exe") OR
