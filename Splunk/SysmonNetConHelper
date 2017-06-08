@@ -1,5 +1,5 @@
 Useful helper script for correlating sysmon netcon logs with their process execution counterparts by tying them to the ProcessGuid.
-EvtCode 3 events don't list the commandline, parent process, or parent process commandline
+EvtCode 3 events don't list the commandline, parent process, or parent process commandline of a process that communicates with a another host. 
 You can keep or remove the dports. It helps trim the noise. Most actors will try to exfil or use C2 over these ports. 
 
 
