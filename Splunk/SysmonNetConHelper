@@ -1,0 +1,16 @@
+Useful helper script for correlating sysmon netcon logs with their EvtCode1 counterparts by tying them to the ProcessGuid.You can keep or remove the dports. It helps trim the noise. Most actors will try to exfil or use C2 over these ports. 
+
+
+sourcetype="<Sysmon>" (EventCode=1 Filename="<process>.exe") OR
+(EventCode=3 Filename="<process.exe>" Initiated="true" DestinationPort=80
+OR DestinationPort=443 OR DestinationPort=53 OR DestinationPort=8080 ) 
+|eval PGUID=coalesce(ProcessGuid,ProcessGuid) 
+| eval same_host = if(src_ip == dest_ip, "yes", "no")
+| search same_host = "no" 
+|stats values(User) as User values(Computer) as
+Computer, values(Image) as Image, values(CommandLine) as CommandLine,
+values(ParentImage) as ParentImage, values(ParentCommandLine) as
+ParentCommandLine, values(DestinationHostname) as DestinationHostname,
+values(DestinationIp) as DestIp, values(DestinationPort) as DPort by PGUID|
+search CommandLine!="" AND DestIp!=""
+
