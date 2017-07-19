@@ -18,4 +18,4 @@ search CommandLine!="" AND DestIp!=""
 
 
 
-Update: 7/18/2017, some Sysmon Event 3 codes have a ProcessGuid of all 0s so correlation will not always be available. More testing is needed. 
+Update: 7/18/2017, some Sysmon Event 3 codes have a ProcessGuid of all 0s so correlation will not always be available. Even if the Event Code 1 does have an Event Code 3 mate. More testing is needed. 
