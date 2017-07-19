@@ -16,3 +16,6 @@ ParentCommandLine, values(DestinationHostname) as DestinationHostname,
 values(DestinationIp) as DestIp, values(DestinationPort) as DPort by PGUID|
 search CommandLine!="" AND DestIp!=""
 
+
+
+Update: 7/18/2017, some Sysmon Event 3 codes have a ProcessGuid of all 0s so correlation will not always be available. More testing is needed. 
