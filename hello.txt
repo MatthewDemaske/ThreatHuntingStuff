@@ -1,1 +1,6 @@
-Hello From PS
+<?xml version="1.0"?>
+<command>
+   <a>
+      <execute>Hello From PS</execute>
+   </a>
+  </command>
