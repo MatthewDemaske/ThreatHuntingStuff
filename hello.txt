@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <command>
    <a>
-      <execute>Hello From PS</execute>
+      <execute>Get-WmiObject Win32_Process -Computer 'localhost'</execute>
    </a>
   </command>
