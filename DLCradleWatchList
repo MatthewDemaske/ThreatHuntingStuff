@@ -1,0 +1,13 @@
+*WebClient*
+*DownloadFile*
+*DownloadString*
+*DownloadData*
+*Start-BitsTransfer*
+*Msxml2.XMLHTTP*
+*WinHttpRequest*
+*WebRequest*
+*InternetExplorer.Application*
+*restmethod*
+*iex*(*iwr*
+*comobject*InternetExplorer*
+*System.Xml.XmlDocument*
