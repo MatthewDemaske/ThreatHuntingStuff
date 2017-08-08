@@ -11,3 +11,4 @@
 *iex*(*iwr*
 *comobject*InternetExplorer*
 *System.Xml.XmlDocument*
+*nslookup -querytype=txt*
