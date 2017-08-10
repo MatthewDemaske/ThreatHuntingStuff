@@ -1,1 +1,1 @@
-Write-Host Boop! -ForegroundColor Green
+Write-Host "Boop" -ForegroundColor Green
