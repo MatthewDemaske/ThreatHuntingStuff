@@ -1,0 +1,4 @@
+$wshell = New-Object -ComObject wscript.shell $wshell.run("notepad") $wshell.AppActivate('Untitled - Notepad')
+Start-Sleep 2 $wshell.SendKeys('^o')
+Start-Sleep 2 $wshell.SendKeys('<URL>') $wshell.SendKeys('~')
+Start-Sleep 5 $wshell.SendKeys('^a') $wshell.SendKeys('^c')
