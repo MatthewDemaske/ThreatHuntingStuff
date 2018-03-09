@@ -1,3 +1,117 @@
+*[Reflection.Assembly]::LoadWithPartialName('System.Core').GetType('System.Diagnostics.Eventing.EventProvider').GetField('m_enabled','NonPublic,Instance').SetValue([Ref].Assembly.GetType('System.Management.Automation.Tracing.PSEtwLogProvider').GetField('etwProvider','NonPublic,Static').GetValue($null),0)*
+*[System.IO.FileStream] $* = New-Object System.IO.FileStream($*, [System.IO.FileMode]::Create, [System.IO.FileAccess]::Write, [System.IO.FileShare]::None, $*)*
+*if ($* -gt ($* - 1) -or $* -lt 0) {Throw "StartByte range must be between 0 and $*"}*
+*Invoke-WmiMethod @WmiMethodArgs -Namespace 'Root\default' -Class 'StdRegProv' -Name 'CheckAccess' -ArgumentList $*, $*, $*
+*Where-Object { $_.GlobalAssemblyCache -And $_.Location.Split('\\')[-1].Equals('System.dll') }*
+*$*.ToString("X$($*2)") -split '([A-F0-9]{2})' | ForEach-Object { if ($_) { $* += [Byte] ('0x{0}' -f $_) } }*
+*Invoke(0x001F0FFF, $*, $*)*
+*Invoke($*, [IntPtr]::Zero, $*.Length + 1, 0x3000, 0x40)*
+*Invoke($*, $*, $*, $*.Length, [Ref] 0) | Out-Null*
+*Invoke([IntPtr]::Zero, $*.Length + 1, 0x3000, 0x40)*
+*Invoke([IntPtr]::Zero, $*.Length + 1, 0x3000, 0x40)*
+*@(Get-WmiObject -Query 'SELECT AddressWidth FROM Win32_Processor')[0] | Select-Object -ExpandProperty AddressWidth*
+*Get-DelegateType @([IntPtr], [IntPtr], [Byte[]], [UInt32], [UInt32].MakeByRefType()) ([Bool])*
+*[System.Runtime.InteropServices.Marshal]::GetDelegateForFunctionPointer($*, $*)*
+*Get-DelegateType @([IntPtr], [UInt32], [IntPtr], [IntPtr], [UInt32], [IntPtr]) ([IntPtr])*
+*DefineDynamicAssembly($*, [System.Reflection.Emit.AssemblyBuilderAccess]::Run)*
+*DefineLiteral('x64', [UInt16] 0x8664) | Out-Null*
+*DefineField('ImageBase', [UInt32], 'Public')).SetOffset(28) | Out-Null*
+*DefineType('IMAGE_NT_HEADERS32', $*, [System.ValueType], 248)*
+*Get-DelegateType @([IntPtr], [IntPtr], [IntPtr], [IntPtr], [UInt32], [UInt32].MakeByRefType()) ([IntPtr])*
+*[System.Runtime.InteropServices.Marshal]::SizeOf([Type]$Value.GetType()) * 2*
+*[IntPtr]$* = [IntPtr](Add-SignedIntAsUnsigned ($*) ($*))*
+*[System.Runtime.InteropServices.Marshal]::WriteByte($*, $*, $Bytes[$*])*
+*DefineMethod('Invoke', 'Public, HideBySig, NewSlot, Virtual', $*, $*)*
+*OpenThreadToken.Invoke($*, $*.TOKEN_QUERY -bor $*.TOKEN_ADJUST_PRIVILEGES, $*, [Ref]$*)*
+*[System.Runtime.InteropServices.Marshal]::PtrToStructure($*, [Type]$*.TOKEN_PRIVILEGES)*
+*NtCreateThreadEx.Invoke([Ref]$*, 0x1FFFFF, [IntPtr]::Zero, $*, $*, $*, $*, 0, 0xffff, 0xffff, [IntPtr]::Zero)*
+*[IntPtr](Add-SignedIntAsUnsigned ([Int64]$*) ([Int64][UInt64]$*.e_lfanew))*
+*DefineDynamicAssembly($*, [System.Reflection.Emit.AssemblyBuilderAccess]::Run)*
+*DefineMethod('Invoke', 'Public, HideBySig, NewSlot, Virtual', $*, $*)*
+*Seek(0x3c, [System.IO.SeekOrigin]::Begin) | Out-Null*
+*New-Object IO.Compression.DeflateStream ($*, [IO.Compression.CompressionMode]::Compress)*
+*Get-WmiObject CommandLineEventConsumer -Namespace root\subscription -filter "name='Updater'" | Remove-WmiObject*
+*'`"$($Env:SystemRoot)\System32\WindowsPowerShell\v1.0\powershell.exe -NonInteractive`"'*
+*[Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]'Administrator')*
+*[Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()*
+*Get-ItemProperty HKLM:\SYSTEM\CurrentControlSet\Control\Lsa -Name 'Security Packages'*
+*::EnumerateSecurityPackages([Ref] $*, [Ref] $*)*
+*New-Object System.IO.Pipes.NamedPipeServerStream($*,"InOut",100, "Byte", "None", 1024, 1024, $*)*
+*[System.Runtime.InteropServices.Marshal]::GetDelegateForFunctionPointer($*, $*)*
+*Invoke($*, $*, $*, 0xF003F, 0x10, 0x3, 0x1, $*, $*, $*, $*, $*, $*)*
+*(New-Object -TypeName 'System.Security.Principal.SecurityIdentifier' -ArgumentList ([Security.Principal.WellKnownSidType]::'LocalSystemSid', $*)).Translate([Security.Principal.NTAccount]).Value*
+*([System.math]::Pow(2, $*)-1) * ([System.Math]::Pow(2,(32 - $*)))*
+*@(80,23,443,21,3389,110,445,139,143,53,135,3306,8080,22*
+*new-object System.Net.Sockets.TcpClient $*.AddressFamily*
+*Register-ObjectEvent -InputObject $*[$*] -EventName Elapsed -Action $* | Out-Null*
+*[System.IO.FileStream] $* = New-Object System.IO.FileStream($*, [System.IO.FileMode]::Create, [System.IO.FileAccess]::Write, [System.IO.FileShare]::None, $*)*
+*[Runtime.InteropServices.MarshalAsAttribute].GetConstructors()[0]*
+*Emit([Reflection.Emit.OpCodes]::Ldtoken, $*)*
+*New-Object System.Threading.Mutex $*,'CSVMutex';*
+*([Net.Dns]::GetHostEntry($*)).AddressList)*
+*(New-Object System.Security.Principal.NTAccount($*, $*))*
+*Translate( [System.Security.Principal.NTAccount]).Value*
+*OpenSubkey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings")*
+*New-Object System.IdentityModel.Tokens.KerberosRequestorSecurityToken -ArgumentList $*
+*GetAccessRules($*,$*,[System.Security.Principal.SecurityIdentifier])*
+*GetType().InvokeMember("HighPart", [System.Reflection.BindingFlags]::GetProperty, $*, $*, $*)*
+*New-Object System.DirectoryServices.DirectorySearcher([ADSI]$*)*
+*Get-DomainSearcher -Domain $* -DomainController $* -PageSize $* -Credential $*
+*Get-DomainSearcher -Domain $* -DomainController $* -PageSize $* -Credential $* -ADSprefix "DC=$($*),CN=MicrosoftDNS,DC=DomainDnsZones"*
+*New-Object System.DirectoryServices.ActiveDirectory.DirectoryContext('Domain', $*)*
+*New-Object System.DirectoryServices.ActiveDirectory.DirectoryContext('Forest', $*, $*.UserName, $*.GetNetworkCredential().Password)*
+*New-Object -TypeName System.DirectoryServices.AccountManagement.PrincipalContext -ArgumentList ([System.DirectoryServices.AccountManagement.ContextType]::Domain), $*
+*([ADSI]"WinNT://$*/$*,group").add("WinNT://$*/$*,user")*
+*New-Object -TypeName System.DirectoryServices.AccountManagement.PrincipalContext -ArgumentList $*, $*
+*filter="(&(name=$*)(distinguishedname=$*)$*)"*
+*filter="(&(objectCategory=organizationalUnit)(name=$*))"*
+*($* -cmatch "^DWM-.*" -and $* -cmatch "^Window\sManager$")*
+*($* -cmatch "NT\sAUTHORITY" -or $* -cmatch "Window\sManager")*
+*Get-WinEvent -LogName "Microsoft-Windows-AppLocker/EXE and DLL" -ErrorAction SilentlyContinue | Where {$_.Id -eq 8002}*
+*Get-WinEvent -LogName "Microsoft-Windows-PowerShell/Operational" -ErrorAction SilentlyContinue | Where {$_.Id -eq 4100}*
+*Get-ChildItem "HKU:\$($*)\Software\Microsoft\Terminal Server Client\Servers" -ErrorAction SilentlyContinue*
+*'[System.Net.ServicePointManager]::ServerCertificateValidationCallback = {$true};$* = New-Object Net.WebClient;$*.Proxy=[Net.WebRequest]::GetSystemWebProxy();$*.Proxy.Credentials=[Net.CredentialCache]::DefaultCredentials;Invoke-Expression $*.downloadstring('''+$*+''');'*
+*[System.Diagnostics.Process]::Start($*)*
+*DynAssembly = New-Object System.Reflection.AssemblyName('MethodLeakAssembly')*
+*Emit([System.Reflection.Emit.OpCodes]::Ldarg_0)*
+*[Byte[]] @(0x60,0xE8,0x04,0,0,0,0x61,0x31,0xC0,0xC3)*
+*[Byte[]] @(0x41,0x54,0x41,0x55,0x41,0x56,0x41,0x57,0x55,0xE8,0x0D,0x00,0x00,0x00,0x5D,0x41,0x5F,0x41,0x5E,0x41,0x5D,0x41,0x5C,0x48,0x31,0xC0,0xC3)*
+*New-Object System.Web.Script.Serialization.JavaScriptSerializer*
+*Get-Content -Path "$Env:systemdrive\Users\$UserName\AppData\Local\Google\Chrome\User Data\Default\History"|Select-String -AllMatches $* |% {($_.Matches).Value} |Sort -Unique*
+*Get-ChildItem 'HKU:\' -ErrorAction SilentlyContinue | Where-Object { $_.Name -match 'S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]+$' }*
+*Get-ChildItem -Path "$Env:systemdrive\Users\" -Filter "*.url" -Recurse -ErrorAction SilentlyContinue*
+*"$Env:systemdrive\Users\$UserName\AppData\Roaming\Mozilla\Firefox\Profiles\"*
+*New-Object System.Windows.Forms.TextBox*
+*($*.Text.Length -ne 0) -and ($*.Text.Length -ne $*)*
+*$TypeBuilder.DefineMethod('GetAsyncKeyState', 'Public, Static', [Int16], [Type[]] @([Windows.Forms.Keys]))*
+*$TypeBuilder.DefineMethod('MapVirtualKey', 'Public, Static', [Int32], [Type[]] @([Int32], [Int32]))*
+*ConnectionString = "Server=$*$*;Database=$*;Integrated Security=SSPI;Connection Timeout=1"*
+*ConnectionString = "Server=$*$*;Database=$*;Integrated Security=SSPI;uid=$*;pwd=$*;Connection Timeout=$*"*
+*ConnectionString = "Server=$*$*;Database=$*;User ID=$*;Password=$*;Connection Timeout=$*"*
+*New-Object -TypeName System.Data.SqlClient.SqlCommand -ArgumentList ($*, $*)*
+*New-Object Drawing.Bitmap $*.Width, $*.Height;*
+*New-Object System.Drawing.Imaging.EncoderParameters;*
+*New-Object IntPtr ($*.ToInt64()+$*)*
+*TVqQAAMA*
+*"<stringfinder>" + $*.padright(256, "?") + "</stringfinder>"*
+*$* -ne [Management.Automation.PSCredential]::Empty*
+*[Reflection.Assembly]::LoadWithPartialName('System.IdentityModel')*
+*filter = "(&(samAccountType=805306368)$*)"*
+*[System.Runtime.InteropServices.Marshal]::AllocHGlobal($*)*
+*([Int] $*.DllCharacteristics -band $*.IMAGE_DLLCHARACTERISTICS_NX_COMPAT) -ne $*.IMAGE_DLLCHARACTERISTICS_NX_COMPAT*
+*[System.Runtime.InteropServices.Marshal]::GetDelegateForFunctionPointer($*, $*)*
+*powershell_reflective_*
+*TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncm*
+[Int16]$* = '0x{0}' -f ((($*[($*+1)..($*)]) | % {$_.ToString('X2')}) -join '')
+[system.runtime.interopservices.marshal]::StructureToPtr($*, $*, $*)
+[Int32]$* = '0x{0}' -f ((($*[($*+19)..($*+16)]) | % {$_.ToString('X2')}) -join '')
+$* = [System.Runtime.InteropServices.Marshal]::ReadInt32($($*.ToInt64())+4)
+$* = [*]::CreateFileTransacted($*.TargetPath,0xC0000000,0,[IntPtr]::Zero,2,0x80,[IntPtr]::Zero,$*,[IntPtr]::Zero,[IntPtr]::Zero)
+$* = [*]::NtCreateSection([ref]$hSection,0xF001F,[IntPtr]::Zero,[ref]$LargeInteger,2,0x1000000,$hTransactedFile)
+$* = [*]::NtCreateProcessEx([ref]$*,0x1FFFFF,[IntPtr]::Zero,$*,4,$*,[IntPtr]::Zero,[IntPtr]::Zero,0)
+$* = [*]::NtCreateThreadEx([ref]$*,0x1FFFFF,[IntPtr]::Zero,$*,[IntPtr]$*,[IntPtr]::Zero,$*,0,0,0,[IntPtr]::Zero)
+$* = [Ref].Assembly.GetType('System.Management.Automation.Tracing.PSEtwLogProvider').GetField('etwProvider','NonPublic,Static');
+$* = New-Object System.Diagnostics.Eventing.EventProvider -ArgumentList @([Guid]::NewGuid());
 *ExecuteShellCommand*
 *GetDelegateForFunctionPointer*
 *GetModuleHandle*
