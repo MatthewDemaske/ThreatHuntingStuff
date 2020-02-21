@@ -1,0 +1,1 @@
+source=*WinEventLog:Security EventCode=4688 NewProcessName="C:\\Windows\\System32\\sdbinst.exe" OR NewProcessName="C:\\Windows\\SysWOW64\\sdbinst.exe"    
