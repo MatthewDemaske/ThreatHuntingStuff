@@ -1,0 +1,1 @@
+source="*WinEventLog:Microsoft-Windows-WMI-Activity/Trace" EventCode=11 Operation="*Win32_Process::Create*"
