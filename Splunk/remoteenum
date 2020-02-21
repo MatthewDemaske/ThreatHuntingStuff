@@ -1,0 +1,1 @@
+sourcetype="*WinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=1 ((Filename=tasklist.exe OR Filename=systeminfo.exe OR Filename=taskkill.exe) CommandLine="*\/S *") OR ((Filename=sc.exe OR Filename=reg.exe) CommandLine="* \\\\*")
