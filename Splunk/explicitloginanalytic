@@ -1,0 +1,2 @@
+sourcetype="XmlWinEventLog:Security" EventCode=4648| transaction user maxspan=15m | eval whatever=mvcount(dest) |
+where whatever>5 
