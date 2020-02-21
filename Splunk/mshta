@@ -1,0 +1,3 @@
+source=*WinEventLog:Security EventCode=4688 
+| search (NewProcessName="*\\rundll32.exe" AND CommandLine="*mshtml*RunHTMLApplication*") OR (NewProcessName="*\\mshta.exe" AND CommandLine="*http*") OR (NewProcessName="*\\regsvr32.exe" CommandLine="*scrobj*")
+| rex field=CommandLine mode=sed "s/[^a-zA-Z0-9]//g"
