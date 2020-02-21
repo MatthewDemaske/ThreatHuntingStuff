@@ -1,0 +1,4 @@
+sourcetype =XmlWinEventLog:Microsoft-Windows-Sysmon/Operational EventCode=1 (((((Image="*dsquery.exe") (CommandLine="*computer*") OR (CommandLine="*group*") OR (CommandLine="*server*") OR 
+CommandLine="*user*")))) OR (((Image="*WMIC.exe") (CommandLine=* NAMESPACE: \\root\\directory\\ldap PATH ds_computer GET*) OR (CommandLine=* NAMESPACE: \\root\\directory\\ldap PATH ds_group GET*) OR
+(CommandLine=wmic* NAMESPACE: \\root\\directory\\ldap PATH ds_user GET*))) OR ((((Image="*net.exe") (CommandLine="*group*") OR (CommandLine="*Domain Controllers*") OR (CommandLine="*Domain Admins*") 
+OR (CommandLine="*/domain") OR (CommandLine="*/domain *"))))
