@@ -1,0 +1,1 @@
+sourcetype="*WinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=12 TargetObject="HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\*"
