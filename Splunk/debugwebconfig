@@ -1,0 +1,2 @@
+source=*WinEventLog:Security EventCode=4688 aspnet_regiis 
+  | search NewProcessName="*\\aspnet_regiis.exe" CommandLine="-pd*"
