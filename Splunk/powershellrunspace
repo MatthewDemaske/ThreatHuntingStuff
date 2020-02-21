@@ -1,0 +1,6 @@
+sourcetype="*WinEventLog:Security" EventCode=4688 NewProcessName!="*:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" NewProcessName!="*:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell_ise.exe" NewProcessName!="*:\\Windows\\System32\\nbtstat.exe" NewProcessName!="*:\Windows\SysWOW64\ARP.EXE" NewProcessName!="*:\\Windows\\System32\\sdiagnhost.exe"
+|eval itime = _time
+|join  type=left max=0 Computer, NewProcessId [search sourcetype="*WinEventLog:Microsoft-Windows-PowerShell/Operational" EventCode=53504 Sid!="S-1-5-18"| rename ComputerName as Computer| rex field=Message "\: (?<process_id>\w+) in"| eval ptime = _time| eval NewProcessId = lower(tostring(process_id,"hex"))| table Computer, NewProcessId, ptime, Message]
+| where (itime - 5 <= ptime AND ptime <= itime + 5) OR (isnull(itime))
+| eval ptime = strftime(ptime,"%x %X"), itime = strftime(itime,"%x %X")
+| table ptime, Computer, Message, NewProcessId, itime, NewProcessName, CommandLine
