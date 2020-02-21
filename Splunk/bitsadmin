@@ -1,0 +1,1 @@
+source=*WinEventLog:Security EventCode=4688 NewProcessName="*\\bitsadmin.exe" CommandLine="* \/transfer*" OR CommandLine="* \/download*" OR CommandLine="* \/addfile*" OR CommandLine="* \/upload*" 
