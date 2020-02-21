@@ -1,0 +1,1 @@
+sourcetype="XmlWinEventLog:Security" (EventCode=4624 AuthenticationPackageName=Kerberos TargetDomainName="*.*") OR (EventCode=4672 SubjectDomainName="-" OR SubjectDomainName="") 
