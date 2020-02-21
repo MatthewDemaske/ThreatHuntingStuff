@@ -1,0 +1,4 @@
+sourcetype="*WinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=12  OR EventCode=13 OR EventCode=14
+(TargetObject="*\\mscfile\\shell\\open\\command*"
+OR TargetObject="*\\Software\\Microsoft\\Windows\\CurrentVersion\\App Paths\\control.exe*"
+OR TargetObject="*\\exefile\\shell\\runas\\command*")
