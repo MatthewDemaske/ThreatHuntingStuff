@@ -1,0 +1,2 @@
+sourcetype="*WinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=1 Filename=csc.exe OR Filename=vbc.exe OR Filename=Microsoft.Workflow.Compiler.exe CommandLine!="*.cmdline*" CommandLine!="*.rsp*"
+  
