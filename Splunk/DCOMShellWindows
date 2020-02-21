@@ -1,0 +1,2 @@
+sourcetype="*WinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=3 direction=inbound Filename=explorer.exe
+| where dest_port >= 49152| where SourcePort >=49152
