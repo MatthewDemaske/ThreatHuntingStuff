@@ -1,0 +1,2 @@
+source=*WinEventLog:Security EventCode=4688 cmd.exe del
+  | search NewProcessName="*\\cmd.exe" CommandLine="*ping *&gt; Nul &amp; del *" OR CommandLine="*choice*&amp;*del *" 
