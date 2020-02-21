@@ -1,0 +1,1 @@
+sourcetype="*WinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=3 Filename=dbgsrv.exe Initiated=true
