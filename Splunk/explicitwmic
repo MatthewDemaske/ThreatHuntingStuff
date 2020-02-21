@@ -1,0 +1,3 @@
+source=*WinEventLog:Security EventID=4648 WMIC.exe
+| search user!="*$" Process_Name="*WMIC.exe" Target_Server_Name!="localhost" Additional_Information!="localhost"
+| search Target_Server_Name!="*$*"
