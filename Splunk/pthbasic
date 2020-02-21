@@ -1,0 +1,1 @@
+sourcetype="*WinEventLog:Security" EventCode=4624 Logon_Type=3 Authentication_Package=NTLM| table _time, ComputerName, TargetUserName, Security_ID, Package_Name__NTLM_only_
