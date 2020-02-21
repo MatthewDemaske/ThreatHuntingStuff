@@ -1,0 +1,1 @@
+sourcetype="*wineventlog:microsoft-windows-sysmon/operational" EventCode=3 Filename="IEExec.exe" Initiated="true" | eval DestinationHostname = if(isnull(DestinationHostname), "Unknown", DestinationHostname) 
