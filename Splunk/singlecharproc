@@ -1,0 +1,7 @@
+source=*WinEventLog:Security EventCode=4688 
+| eval Filename=mvindex(split(NewProcessName,"\\"),-1)
+| eval Filename_Length = length(replace(Filename, "\.[^.]+$", ""))
+| search Filename_Length=1
+| rename Computer as hostname_ip, NewProcessName as image, CommandLine as commandline
+| eval indicator_group = "Hostname: ".hostname_ip." Image: ".image." CommandLine: ".commandline
+| table _time, indicator_group, hostname_ip, image ,commandlin
