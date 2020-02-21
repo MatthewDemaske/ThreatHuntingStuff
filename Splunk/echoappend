@@ -1,0 +1,1 @@
+sourcetype="*WinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=1 Filename=cmd.exe OR Filename=powershell.exe (CommandLine="*@echo *" OR CommandLine="*@ echo *") CommandLine="*&gt;&gt;*" CommandLine="*&amp;*"
