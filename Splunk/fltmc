@@ -1,0 +1,1 @@
+sourcetype=*WinEventLog:Microsoft-Windows-Sysmon/Operational EventCode=1 Filename=fltmc.exe CommandLine="*unload*" OR CommandLine="*detach*"
