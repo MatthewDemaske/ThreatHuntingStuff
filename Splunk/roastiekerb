@@ -1,0 +1,2 @@
+sourcetype="*WinEventLog:Security" EventCode=4769 ServiceName!=krbtgt ServiceName!="*$" TargetUserName!="*$@*" TicketEncryptionType=0x17 | rex field=Target_User_Name "^(?<user>.*)@"
+| where user != ServiceName| stats values(ServiceName) as ServiceName values(Status), values(TicketOptions), values(TicketEncryptionType), dc(ServiceName) as distinctservicecount by user| where distinctservicecount > 5
