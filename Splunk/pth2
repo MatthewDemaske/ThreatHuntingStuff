@@ -1,0 +1,2 @@
+source=*WinEventLog:Security EventCode=4624 Logon_Type=9 AuthenticationPackageName=Negotiate LogonProcessName=seclogo 
+  | search NOT IpAddress="::1"
