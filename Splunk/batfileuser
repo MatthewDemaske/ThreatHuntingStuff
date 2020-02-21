@@ -1,0 +1,1 @@
+sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=1 Filename=cmd.exe (CommandLine="*\\programdata\\*" OR CommandLine="*C:\\Users\\*") AND (ParentCommandLine="*.bat*" OR ParentCommandLine="*.cmd*")  User!="NT AUTHORITY\\SYSTEM"
