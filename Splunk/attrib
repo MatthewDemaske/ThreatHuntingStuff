@@ -1,0 +1,1 @@
+sourcetype=*WinEventLog:Microsoft-Windows-Sysmon/Operational EventCode=1 Filename=attrib.exe CommandLine="* +h*"
