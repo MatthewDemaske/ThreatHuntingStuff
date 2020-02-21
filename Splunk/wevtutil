@@ -1,0 +1,4 @@
+source=*WinEventLog:Security EventCode=4688 wevtutil.exe   
+  | search (CommandLine="*sl*" OR CommandLine="*set-log*" OR CommandLine="*cl*") (CommandLine="*security*" OR CommandLine="*sysmon*" OR CommandLine="*powershell*" OR CommandLine="*application*")  
+  | search NOT CommandLine="*wevtutil  epl*" AND NOT CommandLine="*wevtutil  export-log*"  
+  | search NOT CommandLine="*/bu*"  
