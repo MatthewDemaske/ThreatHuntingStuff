@@ -1,0 +1,1 @@
+sourcetype="*WinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=1 CommandLine="*cmd.exe* /c echo * \\\\.\\pipe\\*"
