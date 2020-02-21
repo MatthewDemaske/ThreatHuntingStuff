@@ -1,0 +1,2 @@
+source=*WinEventLog:Security EventCode=4688 dnscmd.exe  
+  | search CommandLine="*/serverlevelplugindll*" 
