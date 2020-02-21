@@ -1,0 +1,1 @@
+source=*WinEventLog:Security EventCode=4663 ObjectName="\\Device\\*\\Windows\\System32\\lsass.exe" 
