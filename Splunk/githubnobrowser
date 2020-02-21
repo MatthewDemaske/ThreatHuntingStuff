@@ -1,0 +1,3 @@
+EventCode=3 sysmon github 
+| search sourcetype="*wineventlog:microsoft-windows-sysmon/operational" Filename!=vmnat.exe Filename!=chrome.exe Filename!=firefox.exe Filename!=Iexplore.exe Filename!=MicrosoftEdgeCP.exe  FileName!=MicrosoftEdge.exe
+| search DestinationHostname="*github*" 
