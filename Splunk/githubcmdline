@@ -1,0 +1,3 @@
+source=*WinEventLog:Security EventCode=4688 github
+  | search (CommandLine!="*GitHub.VisualStudio*" Filename!="VSInitializer.exe")
+  | search NewProcessName!="C:\\Program Files\\Git\\*" NewProcessName!=*\\Chrome.exe NewProcessName!=*\\Firefox.exe NewProcessName!="*\\Iexplore.exe" CommandLine!=*\\PortableGit* 
