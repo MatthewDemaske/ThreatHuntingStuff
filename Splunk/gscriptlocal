@@ -1,0 +1,1 @@
+sourcetype="*WinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=1 ParentFilename="Gpscript.exe" ParentCommandLine="*/logon" CommandLine!="*\\\\*"  CurrentDirectory="C:\\windows\\System32\\GroupPolicy\\User\\Scripts\\Logon\\"
