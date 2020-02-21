@@ -1,0 +1,1 @@
+sourcetype="*WinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=1 ((Filename=vssadmin.exe) CommandLine="*create*" OR CommandLine="*shadowcopy*") OR (Filename=ntdsutil.exe) OR (Filename=diskshadow.exe)
