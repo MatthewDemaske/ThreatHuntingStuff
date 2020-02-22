@@ -1,0 +1,1 @@
+source=*WinEventLog:Security EventCode=4688 |rex field=CommandLine "(?<CommandLineHash>\b[A-Fa-f0-9]{32}\b)" | search CommandLineHash="*" |  table  _time, dvc, Account_Name, NewProcessName, CommandLine, CommandLineHash, New_Process_ID, Creator_Process_Name
