@@ -1,0 +1,4 @@
+source="*WinEventLog:Security" EventCode=4688 NewProcessName="*\\$recycle.bin\\*"
+| rename host as hostname_ip, NewProcessName as image, CommandLine as commandline 
+| eval indicator_group = "Hostname: ".hostname_ip." Image:" .image." CommandLine: ".commandline 
+| table hostname_ip, commandline
