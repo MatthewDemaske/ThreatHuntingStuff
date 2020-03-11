@@ -1,0 +1,4 @@
+sourcetype="*WinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=11 TargetFilename="*\\$recycle.bin\\*" file_name=*.exe OR file_name=*.rar OR file_name=*.zip OR file_name=*.dll OR file_name=*.bat OR file_name=*.cmd OR file_name=*.js OR file_name=*.vbs OR file_name=*.cs OR file_name=*.ps1 OR file_name=*.psm OR file_name=*.psd
+|rename Computer as hostname_ip, Image as image, file_path as filepath, file_name as filename
+| eval indicator_group = "Host: " . hostname_ip . " Image: " . image . " FilePath: " . filepath. " FileName: " . filename
+| table indicator_group, hostname_ip, image, filepath, filename
