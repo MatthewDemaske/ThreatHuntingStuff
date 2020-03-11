@@ -1,0 +1,6 @@
+source=*WinEventLog:Security EventCode=4688  NewProcessName="*\\findstr.exe" OR NewProcessName="*\\netstat.exe" user!="*$"
+| fillnull value=NULL| search CommandLine!=NULL
+| transaction dvc, Logon_ID maxspan=15s | eval ProcCount = mvcount(NewProcessName) | where ProcCount > 1 
+| rename dvc as hostname_ip, user as username, NewProcessName as image, CommandLine as commandline, Creator_Process_Name as parent_image
+| nomv image | nomv commandline
+| eval indicator_group = "Hostname: ".hostname_ip. " Image: " .image. " CommandLine: " .commandline. " CreatorProcess: " .parent_image
