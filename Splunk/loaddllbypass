@@ -1,0 +1,5 @@
+source="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=1 CommandLine="*\\Users\\*" (Image="*\\rundll32.exe" OR Image="*\\regsvr32.exe" OR Image="*\\regasm.exe" OR Image="*\\regsvcs.exe" OR Image="*\\installutil.exe" ParentImage="*\\cmd.exe" OR ParentImage="*\\=powershell.exe" OR ParentImage="*\\=powershell_ise.exe" OR ParentImage="*\\csc.exe" OR ParentImage="*\\wscript.exe" OR ParentImage="*\\jsc.exe" OR ParentImage="*\\jscript.exe" OR ParentImage="*\\vbc.exe" OR ParentImage="*\\cscript.exe" OR ParentImage="*\\verclsid.exe" OR ParentImage="*\\mshta.exe" OR ParentImage="*\\msbuild.exe" OR ParentImage="*\\scrcons.exe" OR ParentImage="*\\IEExec.exe" OR ParentImage="*\\sh.exe" OR ParentImage="*\\odbcconf.exe" OR ParentImage="*\\hh.exe" OR ParentImage="*\\bash.exe" OR ParentImage="*\\caspol.exe" OR ParentImage="*\\pcalua.exe" OR ParentImage="*\\wmic.exe" OR ParentImage="*\\scriptrunner.exe" OR ParentImage="*\\mftrace.exe" OR ParentImage="*\\appvlp.exe") 
+
+| rex field=CommandLine "(?i)[^\w](?<dll_name>\w+\.(dll|cpl))" 
+| where isnotnull(dll_name) 
+| where ProcessGuid != ParentProcessGuid 
