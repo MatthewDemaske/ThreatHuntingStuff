@@ -1,0 +1,1 @@
+source="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=1 (Image=*\\net.exe OR Image=*\\net1.exe) (CommandLine="* use *") (CommandLine="*Admin$*" OR CommandLine="*C$*" OR CommandLine="*IPC$*" OR CommandLine="*D$*" OR CommandLine="*NETLOGON*" OR CommandLine="*SYSVOL*"
