@@ -1,0 +1,1 @@
+source="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=1 (ParentImage=*\\WinLogon.exe OR ParentImage=*\\Utilman.exe)  (Image=*\\cmd.exe OR Image=*\\net.exe OR Image=*\\Powershell.exe)          
