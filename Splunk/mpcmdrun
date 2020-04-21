@@ -1,0 +1,1 @@
+source=XmlWinEventLog:Security EventCode=4688 NewProcessName="*\\mpcmdrun.exe" CommandLine="*remove*"    
