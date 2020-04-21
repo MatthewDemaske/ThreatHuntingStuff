@@ -1,0 +1,1 @@
+source=XmlWinEventLog:Security EventID=4688 Caller_User_Name!="*$" Caller_User_Name!="*svc*" NewProcessName=*\\mavinject.exe
