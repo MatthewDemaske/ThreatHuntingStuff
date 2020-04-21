@@ -1,0 +1,1 @@
+source="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational"EventCode=1 ParentImage="*\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\*"
