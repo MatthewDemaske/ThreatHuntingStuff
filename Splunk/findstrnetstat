@@ -1,6 +1,4 @@
-source=*WinEventLog:Security EventCode=4688  NewProcessName="*\\findstr.exe" OR NewProcessName="*\\netstat.exe" user!="*$"
+source=XmlWinEventLog:Security EventCode=4688  (NewProcessName=*\\findstr.exe OR NewProcessName=*\\find.exe) CommandLine=*445* OR CommandLine=*3389* OR CommandLine=*:22* OR CommandLine=*5985* OR CommandLine=*5986* OR CommandLine=*password* user!="*$" user!=-
+| search NOT [|inputlookup PHX_WL_findstrnetstat.csv | fields - notes]
 | fillnull value=NULL| search CommandLine!=NULL
-| transaction dvc, Logon_ID maxspan=15s | eval ProcCount = mvcount(NewProcessName) | where ProcCount > 1 
-| rename dvc as hostname_ip, user as username, NewProcessName as image, CommandLine as commandline, Creator_Process_Name as parent_image
-| nomv image | nomv commandline
-| eval indicator_group = "Hostname: ".hostname_ip. " Image: " .image. " CommandLine: " .commandline. " CreatorProcess: " .parent_image
+| stats values(user) as user, values(Computer) as Computer, values(CreatorProcessName), count(CommandLine) as count by CommandLine
