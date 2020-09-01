@@ -1,0 +1,5 @@
+ source=XmlWinEventLog:Security EventCode=4688 NewProcessName="*\\mpcmdrun.exe" CommandLine="*remove*"    
+ | fillnull value=NA ParentProcessName      
+ | rename Computer as hostname_ip, SubjectUserName as username, NewProcessName as image, CommandLine as commandline, ParentProcessName as parent_image
+ | eval indicator_group = "Host: ".hostname_ip." User: ".username." Image: ".image." CommandLine: ".commandline." ParentImage: ".parent_image
+ | transaction indicator_group, hostname_ip, user, image, commandline, parent_image mvraw=true delim="$:$"
